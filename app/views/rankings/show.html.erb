@@ -18,6 +18,9 @@
       <h1><%= image_tag @ranking.answer[n].user.image %>回答者:<%=@ranking.answer[n].user.name%>さん</h1>
       <%= link_to "この人の他の回答を見る", user_path(@ranking.answer[n].user.id) %>
       </p>
+      <h3 class="card-header-title">
+        コメント:<%= @ranking.answer[n].comment %>
+      </h3>
       <table class="table is-bordered is-narrow">
       <tr>
       <th class="table_header">Aランク</th>

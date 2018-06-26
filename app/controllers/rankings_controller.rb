@@ -27,11 +27,9 @@ class RankingsController < ApplicationController
 
     respond_to do |format|
       if @ranking.save
-        format.html { redirect_to @ranking, notice: 'Ranking was successfully created.' }
-        format.json { render :show, status: :created, location: @ranking }
+        format.html { redirect_to root_path, notice: 'Ranking was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @ranking.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -45,7 +43,6 @@ class RankingsController < ApplicationController
         @elements.push("answer.answer["+i.to_s+"]")
       end
     end
-    p @elements
   end
 
   def update
@@ -53,9 +50,8 @@ class RankingsController < ApplicationController
     @answer.user_id =current_user.id #currentUserの情報を取得する
     @answer.ranking_id = @ranking.id
     respond_to do |format|
-
       if @answer.save(answer_params)
-        format.html { redirect_to @ranking, notice: '答えが登録されました' }
+        format.html { redirect_to root_path, notice: '答えが登録されました' }
         format.json { render :show, status: :ok, location: @answer }
       else
         format.html { render :edit }
@@ -64,8 +60,8 @@ class RankingsController < ApplicationController
     end
   end
 
-  def destroy
-    @ranking.destroy
+  def destroy(ranking_id)
+    @answer.destroy
     respond_to do |format|
       format.html { redirect_to rankings_url, notice: 'Ranking was successfully destroyed.' }
       format.json { head :no_content }

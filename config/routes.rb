@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 }
   resources :rankings
   resources :users
+  resources :answers
   
   
 

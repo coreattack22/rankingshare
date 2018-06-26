@@ -5,18 +5,15 @@
   <% (0..@user.answer.length-1).each do |n| %>
     <div class="card">
       <header class="card-header">
-        <p class="card-header-title">
+        <h1 class="card-header-title">
           <%= @user.answer[n].ranking.title %>
-        </p>
-
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </a>
+        </h1>
       </header>
       <div class="card-content">
       <div class="content">
+      <h3 class="card-header-title">
+        コメント:<%= @user.answer[n].comment %>
+      </h3>
       <table class="table is-bordered is-narrow">
       <tr>
       <th class="table_header">Aランク</th>
@@ -304,6 +301,7 @@
         class: "button is-primary is-info is-large" do%>
         Facebookで共有する
         <% end %>
+        <%= link_to '回答を取り消す', @user.answer[n], method: :delete, data: { confirm: '本当に削除しますか？'},class: "button is-primary is-warning is-large"%>
         </footer>
     </div>
     <% end %>  

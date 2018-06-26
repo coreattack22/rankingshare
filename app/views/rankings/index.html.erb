@@ -31,9 +31,18 @@
       </div>
     </div>  
       <footer class="card-footer">
+      <% if user_signed_in? %>
+      <% unless Answer.find_by(user_id: current_user,ranking_id:ranking.id) %>
       <%= link_to '回答する', edit_ranking_path(ranking), class: "card-footer-item" %>
+      <% else %>
+      <% if Answer.find_by(user_id: current_user,ranking_id:ranking.id) %>
+      <%= link_to '回答を取り消す', Answer.find_by(user_id: current_user,ranking_id:ranking.id), method: :delete, data: { confirm: '本当に削除しますか？'}, class: "card-footer-item" %>
+      <% end %>
+      <% end %>
+      <% elsif %>
+      <%= link_to "ログインして回答する", user_twitter_omniauth_authorize_path, class:"fa fa-twitter" %>
+      <% end %>
       <%= link_to '回答を見る', ranking_path(ranking), class: "card-footer-item" %>
-      <%= link_to '削除する', new_ranking_path, class: "card-footer-item" %>
       </footer>
   </div>
     <% end %>
