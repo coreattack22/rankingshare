@@ -1,0 +1,84 @@
+<%= form_with(model: @ranking, local: true) do |form| %>
+    <% if @ranking.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
+  
+        <ul>
+        <% ranking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+      <div class="card">
+
+      <header class="card-header">
+          <h1 class="card-header-title">ランキングを作成する(すべて埋める必要はありません)</h1>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <%= form.text_field :title, id: :ranking_title,class:"input is-info",placeholder:"タイトル"%>
+          <br>
+          <%= form.text_field :element1, id: :ranking_element1 ,class:"input is-primary",placeholder:"項目1"%>
+          <%= form.text_field :element2, id: :ranking_element2 ,class:"input is-primary",placeholder:"項目2"%>
+          <%= form.text_field :element3, id: :ranking_element3 ,class:"input is-primary",placeholder:"項目3"%>
+          <%= form.text_field :element4, id: :ranking_element4 ,class:"input is-primary",placeholder:"項目4"%>
+          <%= form.text_field :element5, id: :ranking_element5 ,class:"input is-primary",placeholder:"項目5"%>
+          <%= form.text_field :element6, id: :ranking_element6 ,class:"input is-primary",placeholder:"項目6"%>
+          <%= form.text_field :element7, id: :ranking_element7 ,class:"input is-primary",placeholder:"項目7"%>
+          <%= form.text_field :element8, id: :ranking_element8 ,class:"input is-primary",placeholder:"項目8"%>
+          <%= form.text_field :element9, id: :ranking_element9 ,class:"input is-primary",placeholder:"項目9"%>
+          <%= form.text_field :element10, id: :ranking_element10 ,class:"input is-primary",placeholder:"項目10"%>
+          <%= form.text_field :element11, id: :ranking_element11 ,class:"input is-primary",placeholder:"項目11"%>
+          <%= form.text_field :element12, id: :ranking_element12 ,class:"input is-primary",placeholder:"項目12"%>
+          <%= form.text_field :element13, id: :ranking_element13 ,class:"input is-primary",placeholder:"項目13"%>
+          <%= form.text_field :element14, id: :ranking_element14 ,class:"input is-primary",placeholder:"項目14"%>
+          <%= form.text_field :element15, id: :ranking_element15 ,class:"input is-primary",placeholder:"項目15"%>
+          <%= form.text_field :element16, id: :ranking_element16 ,class:"input is-primary",placeholder:"項目16"%>
+          <%= form.text_field :element17, id: :ranking_element17 ,class:"input is-primary",placeholder:"項目17"%>
+          <%= form.text_field :element18, id: :ranking_element18 ,class:"input is-primary",placeholder:"項目18"%>
+          <%= form.text_field :element19, id: :ranking_element19 ,class:"input is-primary",placeholder:"項目19"%>
+          <%= form.text_field :element20, id: :ranking_element20 ,class:"input is-primary",placeholder:"項目20"%>
+          <%= form.text_field :element21, id: :ranking_element21 ,class:"input is-primary",placeholder:"項目21"%>
+          <%= form.text_field :element22, id: :ranking_element22 ,class:"input is-primary",placeholder:"項目22"%>
+          <%= form.text_field :element23, id: :ranking_element23 ,class:"input is-primary",placeholder:"項目23"%>
+          <%= form.text_field :element24, id: :ranking_element24 ,class:"input is-primary",placeholder:"項目24"%>
+          <%= form.text_field :element25, id: :ranking_element25 ,class:"input is-primary",placeholder:"項目25"%>
+          <%= form.text_field :element26, id: :ranking_element26 ,class:"input is-primary",placeholder:"項目26"%>
+          <%= form.text_field :element27, id: :ranking_element27 ,class:"input is-primary",placeholder:"項目27"%>
+          <%= form.text_field :element28, id: :ranking_element28 ,class:"input is-primary",placeholder:"項目28"%>
+          <%= form.text_field :element29, id: :ranking_element29 ,class:"input is-primary",placeholder:"項目29"%>
+          <%= form.text_field :element30, id: :ranking_element30 ,class:"input is-primary",placeholder:"項目30"%>
+          <%= form.text_field :element31, id: :ranking_element31 ,class:"input is-primary",placeholder:"項目31"%>
+          <%= form.text_field :element32, id: :ranking_element32 ,class:"input is-primary",placeholder:"項目32"%>
+          <%= form.text_field :element33, id: :ranking_element33 ,class:"input is-primary",placeholder:"項目33"%>
+          <%= form.text_field :element34, id: :ranking_element34 ,class:"input is-primary",placeholder:"項目34"%>
+          <%= form.text_field :element35, id: :ranking_element35 ,class:"input is-primary",placeholder:"項目35"%>
+          <%= form.text_field :element36, id: :ranking_element36 ,class:"input is-primary",placeholder:"項目36"%>
+          <%= form.text_field :element37, id: :ranking_element37 ,class:"input is-primary",placeholder:"項目37"%>
+          <%= form.text_field :element38, id: :ranking_element38 ,class:"input is-primary",placeholder:"項目38"%>
+          <%= form.text_field :element39, id: :ranking_element39 ,class:"input is-primary",placeholder:"項目39"%>
+          <%= form.text_field :element40, id: :ranking_element40 ,class:"input is-primary",placeholder:"項目40"%>
+          <%= form.text_field :element41, id: :ranking_element41 ,class:"input is-primary",placeholder:"項目41"%>
+          <%= form.text_field :element42, id: :ranking_element42 ,class:"input is-primary",placeholder:"項目42"%>
+          <%= form.text_field :element43, id: :ranking_element43 ,class:"input is-primary",placeholder:"項目43"%>
+          <%= form.text_field :element44, id: :ranking_element44 ,class:"input is-primary",placeholder:"項目44"%>
+          <%= form.text_field :element45, id: :ranking_element45 ,class:"input is-primary",placeholder:"項目45"%>
+          <%= form.text_field :element46, id: :ranking_element46 ,class:"input is-primary",placeholder:"項目46"%>
+          <%= form.text_field :element47, id: :ranking_element47 ,class:"input is-primary",placeholder:"項目47"%>
+          <%= form.text_field :element48, id: :ranking_element48 ,class:"input is-primary",placeholder:"項目48"%>
+          <%= form.text_field :element49, id: :ranking_element49 ,class:"input is-primary",placeholder:"項目49"%> 
+          <%= form.text_field :element50, id: :ranking_element50 ,class:"input is-primary",placeholder:"項目50"%> 
+          </div>
+        <footer class="card-footer">
+          <div class="actions card-footer-item">
+            <%= form.submit name="ランキングを作成する" ,class: "button is-primary is-large"%>
+          </div>
+        </footer>
+      </div>
+<% end %>

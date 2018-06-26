@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RankingShare</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header class="nav">
+    <div class="level-left">
+    <%= link_to "RankingShare",root_path, class:"fa fa-home" %>
+    <% if user_signed_in? %>
+      <%= link_to "マイページ", user_path(current_user), class:"fa fa-home" %>
+  　<% end %>
+    <%= link_to 'ランキングを作る', new_ranking_path, class: "button is-primary is-large" %>
+      <% if user_signed_in? %>
+        <%= image_tag current_user.image %>
+        <h2 class="title"><%= current_user.name %></h2>
+        <%= link_to "ログアウトする", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "ログインする", user_twitter_omniauth_authorize_path, class:"fa fa-twitter" %>
+      <% end %>
+    </div>
+  </header>
+
+  <div class="hero is-info is-bold">
+     <div class="hero-body">
+         <div class="container">
+         </div>
+     </div>
+  </div>
+
+  <%= yield %>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      2018 ©KK
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

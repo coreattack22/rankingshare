@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div class="columns">
+  <div class="column">
+  <% @rankings.each do |ranking| %>
+    <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        <%= ranking.title %>
+      </p>
+      <a href="#" class="card-header-icon" aria-label="more options">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <%= ranking.element1 %>
+        <%= ranking.element2 %>
+        <%= ranking.element3 %>
+        <%= ranking.element4 %>
+        <%= ranking.element5 %>
+        <%= ranking.element6 %>
+        <%= ranking.element7 %>
+        <%= ranking.element8 %>
+        <%= ranking.element9 %>
+        <%= ranking.element10 %>
+        .....
+        <br>
+      </div>
+    </div>  
+      <footer class="card-footer">
+      <%= link_to '回答する', edit_ranking_path(ranking), class: "card-footer-item" %>
+      <%= link_to '回答を見る', ranking_path(ranking), class: "card-footer-item" %>
+      <%= link_to '削除する', new_ranking_path, class: "card-footer-item" %>
+      </footer>
+  </div>
+    <% end %>
+  </div>
+</div>

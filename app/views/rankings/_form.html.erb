@@ -1,0 +1,278 @@
+<%= form_with(model: ranking, local: true) do |form| %>
+  <% if ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
+
+      <ul>
+      <% ranking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <p>ランキング製作者</p>
+    </div>
+
+  <div class="field">
+　　<%= form.label :title %><%= @ranking.title %>
+  </div>
+
+  <div class="field">
+  　<p>このアンケートが答えられた回数  <%= @ranking.ranked_count %>回</p>
+  </div>
+
+  <div class="field">
+    <%= current_user.id %>
+    <input name=answer[answerer_id] value="<%= @answer.answerer_id %>" class="form-control">
+  </div>
+
+
+  <div class="field">
+    <%= @ranking.element2 %>
+    <input name=answer[answer2] value="<%= @answer.answer2 %>" class="form-control">
+  </div>
+
+  <div class="field">
+    <%= @ranking.element3 %>
+    <input name=answer[answer3] value="<%= @answer.answer3 %>" class="form-control">
+  </div>
+
+  <div class="field">
+  <input name=answer[answer4] value="<%= @answer.answer4 %>" class="form-control">
+  </div>
+
+  <div class="field">
+  <input name=answer[answer5] value="<%= @answer.answer5 %>" class="form-control">
+  </div>
+
+  <div class="field">
+    <%= @ranking.element6 %>
+    <%= form.text_field :element6, id: :ranking_element6 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element7 %>
+    <%= form.text_field :element7, id: :ranking_element7 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element8 %>
+    <%= form.text_field :element8, id: :ranking_element8 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element9 %>
+    <%= form.text_field :element9, id: :ranking_element9 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element10 %>
+    <%= form.text_field :element10, id: :ranking_element10 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element11 %>
+    <%= form.text_field :element11, id: :ranking_element11 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element12 %>
+    <%= form.text_field :element12, id: :ranking_element12 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element13 %>
+    <%= form.text_field :element13, id: :ranking_element13 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element14 %>
+    <%= form.text_field :element14, id: :ranking_element14 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element15 %>
+    <%= form.text_field :element15, id: :ranking_element15 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element16 %>
+    <%= form.text_field :element16, id: :ranking_element16 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element17 %>
+    <%= form.text_field :element17, id: :ranking_element17 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element18 %>
+    <%= form.text_field :element18, id: :ranking_element18 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element19 %>
+    <%= form.text_field :element19, id: :ranking_element19 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element20 %>
+    <%= form.text_field :element20, id: :ranking_element20 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element21 %>
+    <%= form.text_field :element21, id: :ranking_element21 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element22 %>
+    <%= form.text_field :element22, id: :ranking_element22 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element23 %>
+    <%= form.text_field :element23, id: :ranking_element23 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element24 %>
+    <%= form.text_field :element24, id: :ranking_element24 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element25 %>
+    <%= form.text_field :element25, id: :ranking_element25 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element26 %>
+    <%= form.text_field :element26, id: :ranking_element26 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element27 %>
+    <%= form.text_field :element27, id: :ranking_element27 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element28 %>
+    <%= form.text_field :element28, id: :ranking_element28 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element29 %>
+    <%= form.text_field :element29, id: :ranking_element29 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element30 %>
+    <%= form.text_field :element30, id: :ranking_element30 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element31 %>
+    <%= form.text_field :element31, id: :ranking_element31 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element32 %>
+    <%= form.text_field :element32, id: :ranking_element32 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element33 %>
+    <%= form.text_field :element33, id: :ranking_element33 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element34 %>
+    <%= form.text_field :element34, id: :ranking_element34 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element35 %>
+    <%= form.text_field :element35, id: :ranking_element35 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element36 %>
+    <%= form.text_field :element36, id: :ranking_element36 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element37 %>
+    <%= form.text_field :element37, id: :ranking_element37 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element38 %>
+    <%= form.text_field :element38, id: :ranking_element38 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element39 %>
+    <%= form.text_field :element39, id: :ranking_element39 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element40 %>
+    <%= form.text_field :element40, id: :ranking_element40 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element41 %>
+    <%= form.text_field :element41, id: :ranking_element41 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element42 %>
+    <%= form.text_field :element42, id: :ranking_element42 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element43 %>
+    <%= form.text_field :element43, id: :ranking_element43 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element44 %>
+    <%= form.text_field :element44, id: :ranking_element44 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element45 %>
+    <%= form.text_field :element45, id: :ranking_element45 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element46 %>
+    <%= form.text_field :element46, id: :ranking_element46 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element47 %>
+    <%= form.text_field :element47, id: :ranking_element47 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element48 %>
+    <%= form.text_field :element48, id: :ranking_element48 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element49 %>
+    <%= form.text_field :element49, id: :ranking_element49 %>
+  </div>
+
+  <div class="field">
+    <%= @ranking.element50 %>
+    <%= form.text_field :element50, id: :ranking_element50 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,578 @@
+<%= form_with(model: @ranking, local: true) do |form| %>
+    <% if @ranking.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
+        <ul>
+        <% ranking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="card">
+      <header class="card-header">
+        <h1><%= @ranking.title %></h1>
+      </header>
+
+      <div class="card-content">
+        <p>コメント:<input name=answer[comment] value="<%= @answer.comment %>" class="form-control Info input"></p>
+        <br>
+        <table class="table is-bordered is-narrow">
+        <% unless @ranking.element1=="" %>
+        <tr>
+        <th><%= @ranking.element1 %></th>
+        <th>Aランク<input name="answer[answer1]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer1]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer1]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer1]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer1]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer1]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element2=="" %>
+        <tr>
+        <th><%= @ranking.element2 %></th>
+        <th>Aランク<input name="answer[answer2]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer2]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer2]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer2]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer2]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer2]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element3=="" %>
+        <tr>
+        <th><%= @ranking.element3 %></th>
+        <th>Aランク<input name="answer[answer3]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer3]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer3]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer3]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer3]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer3]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element4=="" %>
+        <tr>
+        <th><%= @ranking.element4 %></th>
+        <th>Aランク<input name="answer[answer4]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer4]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer4]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer4]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer4]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer4]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element5=="" %>
+        <tr>
+        <th><%= @ranking.element5 %></th>
+        <th>Aランク<input name="answer[answer5]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer5]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer5]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer5]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer5]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer5]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element6=="" %>
+        <tr>
+        <th><%= @ranking.element6 %></th>
+        <th>Aランク<input name="answer[answer6]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer6]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer6]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer6]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer6]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer6]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element7=="" %>
+        <tr>
+        <th><%= @ranking.element7 %></th>
+        <th>Aランク<input name="answer[answer7]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer7]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer7]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer7]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer7]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer7]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element8=="" %>
+        <tr>
+        <th><%= @ranking.element8 %></th>
+        <th>Aランク<input name="answer[answer8]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer8]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer8]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer8]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer8]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer8]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element9=="" %>
+        <tr>
+        <th><%= @ranking.element9 %></th>
+        <th>Aランク<input name="answer[answer9]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer9]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer9]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer9]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer9]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer9]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element10=="" %>
+        <th><%= @ranking.element10 %></th>
+        <th>Aランク<input name="answer[answer10]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer10]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer10]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer10]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer10]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer10]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element11=="" %>
+        <tr>
+        <th><%= @ranking.element11 %></th>
+        <th>Aランク<input name="answer[answer11]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer11]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer11]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer11]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer11]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer11]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element12=="" %>
+        <tr>
+        <th><%= @ranking.element12 %></th>
+        <th>Aランク<input name="answer[answer12]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer12]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer12]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer12]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer12]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer12]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element13=="" %>
+        <tr>
+        <th><%= @ranking.element13 %></th>
+        <th>Aランク<input name="answer[answer13]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer13]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer13]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer13]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer13]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer13]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element14=="" %>
+        <tr>
+        <th><%= @ranking.element14 %></th>
+        <th>Aランク<input name="answer[answer14]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer14]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer14]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer14]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer14]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer14]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element15=="" %>
+        <tr>
+        <th><%= @ranking.element15 %></th>
+        <th>Aランク<input name="answer[answer15]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer15]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer15]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer15]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer15]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer15]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element16=="" %>
+        <tr>
+        <th><%= @ranking.element16 %></th>
+        <th>Aランク<input name="answer[answer16]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer16]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer16]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer16]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer16]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer16]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element17=="" %>
+        <tr>
+        <th><%= @ranking.element17 %></th>
+        <th>Aランク<input name="answer[answer17]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer17]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer17]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer17]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer17]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer17]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element18=="" %>
+        <tr>
+        <th><%= @ranking.element18 %></th>
+        <th>Aランク<input name="answer[answer18]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer18]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer18]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer18]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer18]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer18]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element19=="" %>
+        <tr>
+        <th><%= @ranking.element19 %></th>
+        <th>Aランク<input name="answer[answer19]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer19]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer19]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer19]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer19]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer19]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element20=="" %>
+        <th><%= @ranking.element20 %></th>
+        <th>Aランク<input name="answer[answer20]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer20]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer20]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer20]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer20]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer20]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element21=="" %>
+        <tr>
+        <th><%= @ranking.element21 %></th>
+        <th>Aランク<input name="answer[answer21]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer21]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer21]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer21]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer21]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer21]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element22=="" %>
+        <tr>
+        <th><%= @ranking.element22 %></th>
+        <th>Aランク<input name="answer[answer22]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer22]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer22]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer22]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer22]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer22]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element23=="" %>
+        <tr>
+        <th><%= @ranking.element23 %></th>
+        <th>Aランク<input name="answer[answer23]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer23]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer23]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer23]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer23]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer23]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element24=="" %>
+        <tr>
+        <th><%= @ranking.element24 %></th>
+        <th>Aランク<input name="answer[answer24]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer24]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer24]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer24]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer24]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer24]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element25=="" %>
+        <tr>
+        <th><%= @ranking.element25 %></th>
+        <th>Aランク<input name="answer[answer25]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer25]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer25]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer25]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer25]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer25]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element26=="" %>
+        <tr>
+        <th><%= @ranking.element26 %></th>
+        <th>Aランク<input name="answer[answer26]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer26]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer26]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer26]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer26]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer26]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element27=="" %>
+        <tr>
+        <th><%= @ranking.element27 %></th>
+        <th>Aランク<input name="answer[answer27]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer27]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer27]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer27]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer27]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer27]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element28=="" %>
+        <tr>
+        <th><%= @ranking.element28 %></th>
+        <th>Aランク<input name="answer[answer28]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer28]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer28]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer28]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer28]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer28]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element29=="" %>
+        <tr>
+        <th><%= @ranking.element29 %></th>
+        <th>Aランク<input name="answer[answer29]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer29]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer29]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer29]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer29]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer29]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element30=="" %>
+        <tr>
+        <th><%= @ranking.element30 %></th>
+        <th>Aランク<input name="answer[answer30]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer30]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer30]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer30]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer30]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer30]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element31=="" %>
+        <tr>
+        <th><%= @ranking.element31 %></th>
+        <th>Aランク<input name="answer[answer31]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer31]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer31]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer31]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer31]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer31]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element32=="" %>
+        <tr>
+        <th><%= @ranking.element32 %></th>
+        <th>Aランク<input name="answer[answer32]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer32]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer32]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer32]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer32]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer32]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element33=="" %>
+        <tr>
+        <th><%= @ranking.element33 %></th>
+        <th>Aランク<input name="answer[answer33]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer33]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer33]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer33]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer33]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer33]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element34=="" %>
+        <tr>
+        <th><%= @ranking.element34 %></th>
+        <th>Aランク<input name="answer[answer34]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer34]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer34]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer34]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer34]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer34]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element35=="" %>
+        <tr>
+        <th><%= @ranking.element35 %></th>
+        <th>Aランク<input name="answer[answer35]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer35]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer35]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer35]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer35]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer35]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element36=="" %>
+        <tr>
+        <th><%= @ranking.element36 %></th>
+        <th>Aランク<input name="answer[answer36]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer36]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer36]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer36]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer36]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer36]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element37=="" %>
+        <tr>
+        <th><%= @ranking.element37 %></th>
+        <th>Aランク<input name="answer[answer37]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer37]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer37]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer37]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer37]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer37]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element38=="" %>
+        <tr>
+        <th><%= @ranking.element38 %></th>
+        <th>Aランク<input name="answer[answer38]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer38]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer38]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer38]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer38]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer38]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element39=="" %>
+        <tr>
+        <th><%= @ranking.element39 %></th>
+        <th>Aランク<input name="answer[answer39]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer39]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer39]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer39]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer39]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer39]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element40=="" %>
+        <tr>
+        <th><%= @ranking.element40 %></th>
+        <th>Aランク<input name="answer[answer40]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer40]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer40]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer40]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer40]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer40]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element41=="" %>
+        <tr>
+        <th><%= @ranking.element41 %></th>
+        <th>Aランク<input name="answer[answer41]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer41]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer41]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer41]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer41]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer41]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element42=="" %>
+        <tr>
+        <th><%= @ranking.element42 %></th>
+        <th>Aランク<input name="answer[answer42]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer42]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer42]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer42]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer42]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer42]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element43=="" %>
+        <tr>
+        <th><%= @ranking.element43 %></th>
+        <th>Aランク<input name="answer[answer43]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer43]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer43]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer43]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer43]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer43]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element44=="" %>
+        <tr>
+        <th><%= @ranking.element44 %></th>
+        <th>Aランク<input name="answer[answer44]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer44]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer44]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer44]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer44]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer44]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element45=="" %>
+        <tr>
+        <th><%= @ranking.element45 %></th>
+        <th>Aランク<input name="answer[answer45]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer45]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer45]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer45]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer45]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer45]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element46=="" %>
+        <tr>
+        <th><%= @ranking.element46 %></th>
+        <th>Aランク<input name="answer[answer46]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer46]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer46]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer46]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer46]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer46]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element47=="" %>
+        <tr>
+        <th><%= @ranking.element47 %></th>
+        <th>Aランク<input name="answer[answer47]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer47]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer47]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer47]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer47]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer47]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element48=="" %>
+        <tr>
+        <th><%= @ranking.element48 %></th>
+        <th>Aランク<input name="answer[answer48]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer48]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer48]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer48]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer48]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer48]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element49=="" %>
+        <tr>
+        <th><%= @ranking.element49 %></th>
+        <th>Aランク<input name="answer[answer49]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer49]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer49]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer49]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer49]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer49]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        <% unless @ranking.element50=="" %>
+        <tr>
+        <th><%= @ranking.element50 %></th>
+        <th>Aランク<input name="answer[answer50]" type="radio" value=5/></th>
+        <th>Bランク<input name="answer[answer50]" type="radio" value=4/></th>
+        <th>Cランク<input name="answer[answer50]" type="radio" value=3/></th>
+        <th>Dランク<input name="answer[answer50]" type="radio" value=2/></th>
+        <th>Eランク<input name="answer[answer50]" type="radio" value=1/></th>
+        <th>無回答<input name="answer[answer50]"  type="radio" value=0 checked="checked"/></th>
+        </tr>
+        <% end %>
+        </table>        
+      </div>
+      <footer class="card-footer">
+       <div class="actions">
+         <%= form.submit %>
+      </footer>
+    </div>
+    <% end %>
+  
