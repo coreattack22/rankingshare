@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<div class="hero is-primary is-bold">
+<div class="hero-body">
+    <div class="container">
+    <h1><%= image_tag @user.image %><%=@user.name%>さんの回答一覧</h1>
+    </div>
+</div>
+</div>
 <div class="columns">
   <div class="column">
   <% (0..@user.answer.length-1).each do |n| %>
@@ -301,7 +307,7 @@
         class: "button is-primary is-info is-large" do%>
         Facebookで共有する
         <% end %>
-        <% if Answer.find_by(user_id: current_user,ranking_id:ranking.id) && current_user.id== @user.id%>
+        <% if current_user.id== @user.id%>
         <%= link_to '回答を取り消す', @user.answer[n], method: :delete, data: { confirm: '本当に削除しますか？'},class: "button is-primary is-warning is-large"%>
         <%end%>
         </footer>
