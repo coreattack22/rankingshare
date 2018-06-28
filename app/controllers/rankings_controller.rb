@@ -2,18 +2,60 @@ class RankingsController < ApplicationController
   before_action :page_explain
   before_action :set_ranking, only: [:show, :edit, :update, :destroy]
   before_action :answer_params, only: [:update]
-
-  helper_method :rank
+  helper_method :culc, :menu
 
   def index
     @rankings = Ranking.all
+
   end
 
-  def rank(rank,eval,answer)
-    if rank==eval
-      return answer
+  def menu(ranking)
+    menu=[]
+    unless ranking.element1==""
+      menu.push(ranking.element1)
     end
+    unless ranking.element2==""
+      menu.push(ranking.element2)
+    end
+    unless ranking.element3==""
+      menu.push(ranking.element3)
+    end
+    unless ranking.element4==""
+      menu.push(ranking.element4)
+    end
+    unless ranking.element5==""
+      menu.push(ranking.element5)
+    end
+    menu_string=menu.join(" , ")
+    unless ranking.element6==""
+      menu_string=menu_string+"...."
+    end
+    return menu_string
   end
+
+  def culc(rank,number)
+    ranks=[]
+      if @ranking.answer[number].answer1==rank
+        ranks.push(@ranking.element1)
+      end
+      if @ranking.answer[number].answer2==rank
+        ranks.push(@ranking.element2)
+      end
+      if @ranking.answer[number].answer3==rank
+        ranks.push(@ranking.element3)
+      end
+      if @ranking.answer[number].answer4==rank
+        ranks.push(@ranking.element4)
+      end
+      if @ranking.answer[number].answer5==rank
+        ranks.push(@ranking.element5)
+      end
+      if @ranking.answer[number].answer6==rank
+        ranks.push(@ranking.element6)
+      end
+      menu=ranks.join(" , ")
+      return menu
+    end
 
   def show
   end
@@ -24,6 +66,7 @@ class RankingsController < ApplicationController
 
   def create
     @ranking = Ranking.new(ranking_params)
+    @ranking.maker_id=current_user.id
 
     respond_to do |format|
       if @ranking.save
@@ -60,8 +103,8 @@ class RankingsController < ApplicationController
     end
   end
 
-  def destroy(ranking_id)
-    @answer.destroy
+  def destroy
+    @ranking.destroy
     respond_to do |format|
       format.html { redirect_to rankings_url, notice: 'Ranking was successfully destroyed.' }
       format.json { head :no_content }

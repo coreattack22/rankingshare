@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  helper_method :rank , :delete_answer
+  helper_method :culc
 
   def show
     @twitter_url=[]
@@ -34,11 +34,28 @@ class UsersController < ApplicationController
     end
   end
 
-  def rank(rank,eval,answer)
-    if rank==eval
-      return answer
+  def culc(rank,number)
+    ranks=[]
+      if @user.answer[number].answer1==rank
+        ranks.push(@user.answer[number].ranking.element1)
+      end
+      if @user.answer[number].answer2==rank
+        ranks.push(@user.answer[number].ranking.element2)
+      end
+      if @user.answer[number].answer3==rank
+        ranks.push(@user.answer[number].ranking.element3)
+      end
+      if @user.answer[number].answer4==rank
+        ranks.push(@user.answer[number].ranking.element4)
+      end
+      if @user.answer[number].answer5==rank
+        ranks.push(@user.answer[number].ranking.element5)
+      end
+      if @user.answer[number].answer6==rank
+        ranks.push(@user.answer[number].ranking.element6)
+      end
+      return ranks.join(" , ")
     end
-  end
 
   def create
   end
@@ -51,13 +68,7 @@ class UsersController < ApplicationController
 
   end
 
-  def delete_answer(answer)
-    @answer=answer
-        @answer.destroy
-    respond_to do |format|
-      format.html { redirect_to rankings_url, notice: 'Ranking was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+  def delete
   end
 
   private

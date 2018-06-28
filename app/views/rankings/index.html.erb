@@ -16,17 +16,7 @@
     </header>
     <div class="card-content">
       <div class="content">
-        <%= ranking.element1 %>
-        <%= ranking.element2 %>
-        <%= ranking.element3 %>
-        <%= ranking.element4 %>
-        <%= ranking.element5 %>
-        <%= ranking.element6 %>
-        <%= ranking.element7 %>
-        <%= ranking.element8 %>
-        <%= ranking.element9 %>
-        <%= ranking.element10 %>
-        .....
+      <%= menu(ranking) %>
         <br>
       </div>
     </div>  
@@ -40,9 +30,12 @@
       <% end %>
       <% end %>
       <% elsif %>
-      <%= link_to "ログインして回答する", user_twitter_omniauth_authorize_path, class:"fa fa-twitter" %>
+      <%= link_to "ログインして回答する", user_twitter_omniauth_authorize_path, class:"fa fa-twitter", class: "card-footer-item"  %>
       <% end %>
       <%= link_to '回答を見る', ranking_path(ranking), class: "card-footer-item" %>
+      <% if Ranking.find_by(maker_id: current_user,id:ranking.id) %>
+      <%= link_to '作成したランキングを削除する', ranking_path(ranking), method: :delete, data: { confirm: '本当に削除しますか？'}, class: "card-footer-item" %>
+      <% end %>
       </footer>
   </div>
     <% end %>

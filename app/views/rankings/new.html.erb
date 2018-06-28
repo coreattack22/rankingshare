@@ -20,7 +20,8 @@
           </a>
         </header>
         <div class="card-content">
-          <%= form.text_field :title, id: :ranking_title,class:"input is-info",placeholder:"タイトル"%>
+        <%= form.submit name="ランキングを作成する" ,class: "button is-primary is-large"%>
+        <%= form.text_field :title, id: :ranking_title,class:"input is-info",placeholder:"タイトル"%>
           <br>
           <%= form.text_field :element1, id: :ranking_element1 ,class:"input is-primary",placeholder:"項目1"%>
           <%= form.text_field :element2, id: :ranking_element2 ,class:"input is-primary",placeholder:"項目2"%>

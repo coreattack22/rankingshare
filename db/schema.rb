@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625201144) do
+ActiveRecord::Schema.define(version: 20180628000602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,56 +19,56 @@ ActiveRecord::Schema.define(version: 20180625201144) do
     t.integer "ranking_id", null: false
     t.integer "user_id", null: false
     t.string "comment"
-    t.integer "answer1"
-    t.integer "answer2"
-    t.integer "answer3"
-    t.integer "answer4"
-    t.integer "answer5"
-    t.integer "answer6"
-    t.integer "answer7"
-    t.integer "answer8"
-    t.integer "answer9"
-    t.integer "answer10"
-    t.integer "answer11"
-    t.integer "answer12"
-    t.integer "answer13"
-    t.integer "answer14"
-    t.integer "answer15"
-    t.integer "answer16"
-    t.integer "answer17"
-    t.integer "answer18"
-    t.integer "answer19"
-    t.integer "answer20"
-    t.integer "answer21"
-    t.integer "answer22"
-    t.integer "answer23"
-    t.integer "answer24"
-    t.integer "answer25"
-    t.integer "answer26"
-    t.integer "answer27"
-    t.integer "answer28"
-    t.integer "answer29"
-    t.integer "answer30"
-    t.integer "answer31"
-    t.integer "answer32"
-    t.integer "answer33"
-    t.integer "answer34"
-    t.integer "answer35"
-    t.integer "answer36"
-    t.integer "answer37"
-    t.integer "answer38"
-    t.integer "answer39"
-    t.integer "answer40"
-    t.integer "answer41"
-    t.integer "answer42"
-    t.integer "answer43"
-    t.integer "answer44"
-    t.integer "answer45"
-    t.integer "answer46"
-    t.integer "answer47"
-    t.integer "answer48"
-    t.integer "answer49"
-    t.integer "answer50"
+    t.integer "answer1", default: 0
+    t.integer "answer2", default: 0
+    t.integer "answer3", default: 0
+    t.integer "answer4", default: 0
+    t.integer "answer5", default: 0
+    t.integer "answer6", default: 0
+    t.integer "answer7", default: 0
+    t.integer "answer8", default: 0
+    t.integer "answer9", default: 0
+    t.integer "answer10", default: 0
+    t.integer "answer11", default: 0
+    t.integer "answer12", default: 0
+    t.integer "answer13", default: 0
+    t.integer "answer14", default: 0
+    t.integer "answer15", default: 0
+    t.integer "answer16", default: 0
+    t.integer "answer17", default: 0
+    t.integer "answer18", default: 0
+    t.integer "answer19", default: 0
+    t.integer "answer20", default: 0
+    t.integer "answer21", default: 0
+    t.integer "answer22", default: 0
+    t.integer "answer23", default: 0
+    t.integer "answer24", default: 0
+    t.integer "answer25", default: 0
+    t.integer "answer26", default: 0
+    t.integer "answer27", default: 0
+    t.integer "answer28", default: 0
+    t.integer "answer29", default: 0
+    t.integer "answer30", default: 0
+    t.integer "answer31", default: 0
+    t.integer "answer32", default: 0
+    t.integer "answer33", default: 0
+    t.integer "answer34", default: 0
+    t.integer "answer35", default: 0
+    t.integer "answer36", default: 0
+    t.integer "answer37", default: 0
+    t.integer "answer38", default: 0
+    t.integer "answer39", default: 0
+    t.integer "answer40", default: 0
+    t.integer "answer41", default: 0
+    t.integer "answer42", default: 0
+    t.integer "answer43", default: 0
+    t.integer "answer44", default: 0
+    t.integer "answer45", default: 0
+    t.integer "answer46", default: 0
+    t.integer "answer47", default: 0
+    t.integer "answer48", default: 0
+    t.integer "answer49", default: 0
+    t.integer "answer50", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ranking_id", "user_id"], name: "index_answers_on_ranking_id_and_user_id", unique: true
