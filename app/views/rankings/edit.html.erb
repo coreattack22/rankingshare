@@ -1,13 +1,11 @@
 <%= form_with(model: @ranking, local: true) do |form| %>
-    <% if @ranking.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
-        <ul>
-        <% ranking.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
+    <% if @answer.errors.any? %>
+    <article class="message is-danger">
+    <div class="message-header">
+      <p>登録失敗</p>
+    </div>
+    <div class="message-body">少なくとも１つ以上の項目に回答してください</div>
+  </article>
     <% end %>
 
     <div class="card">
