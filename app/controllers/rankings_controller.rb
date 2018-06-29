@@ -57,6 +57,138 @@ class RankingsController < ApplicationController
       if @ranking.answer[number].answer6==rank
         ranks.push(@ranking.element6)
       end
+      if @ranking.answer[number].answer7==rank
+        ranks.push(@ranking.element7)
+      end
+      if @ranking.answer[number].answer8==rank
+        ranks.push(@ranking.element8)
+      end
+      if @ranking.answer[number].answer9==rank
+        ranks.push(@ranking.element9)
+      end
+      if @ranking.answer[number].answer10==rank
+        ranks.push(@ranking.element10)
+      end
+      if @ranking.answer[number].answer11==rank
+        ranks.push(@ranking.element11)
+      end
+      if @ranking.answer[number].answer12==rank
+        ranks.push(@ranking.element12)
+      end
+      if @ranking.answer[number].answer13==rank
+        ranks.push(@ranking.element13)
+      end
+      if @ranking.answer[number].answer14==rank
+        ranks.push(@ranking.element14)
+      end
+      if @ranking.answer[number].answer15==rank
+        ranks.push(@ranking.element15)
+      end
+      if @ranking.answer[number].answer16==rank
+        ranks.push(@ranking.element16)
+      end
+      if @ranking.answer[number].answer17==rank
+        ranks.push(@ranking.element17)
+      end
+      if @ranking.answer[number].answer18==rank
+        ranks.push(@ranking.element18)
+      end
+      if @ranking.answer[number].answer19==rank
+        ranks.push(@ranking.element19)
+      end
+      if @ranking.answer[number].answer20==rank
+        ranks.push(@ranking.element20)
+      end
+      if @ranking.answer[number].answer21==rank
+        ranks.push(@ranking.element21)
+      end
+      if @ranking.answer[number].answer22==rank
+        ranks.push(@ranking.element22)
+      end
+      if @ranking.answer[number].answer23==rank
+        ranks.push(@ranking.element23)
+      end
+      if @ranking.answer[number].answer24==rank
+        ranks.push(@ranking.element24)
+      end
+      if @ranking.answer[number].answer25==rank
+        ranks.push(@ranking.element25)
+      end
+      if @ranking.answer[number].answer26==rank
+        ranks.push(@ranking.element26)
+      end
+      if @ranking.answer[number].answer27==rank
+        ranks.push(@ranking.element27)
+      end
+      if @ranking.answer[number].answer28==rank
+        ranks.push(@ranking.element28)
+      end
+      if @ranking.answer[number].answer29==rank
+        ranks.push(@ranking.element29)
+      end
+      if @ranking.answer[number].answer30==rank
+        ranks.push(@ranking.element30)
+      end
+      if @ranking.answer[number].answer31==rank
+        ranks.push(@ranking.element31)
+      end
+      if @ranking.answer[number].answer32==rank
+        ranks.push(@ranking.element32)
+      end
+      if @ranking.answer[number].answer33==rank
+        ranks.push(@ranking.element33)
+      end
+      if @ranking.answer[number].answer34==rank
+        ranks.push(@ranking.element34)
+      end
+      if @ranking.answer[number].answer35==rank
+        ranks.push(@ranking.element35)
+      end
+      if @ranking.answer[number].answer36==rank
+        ranks.push(@ranking.element36)
+      end
+      if @ranking.answer[number].answer37==rank
+        ranks.push(@ranking.element37)
+      end
+      if @ranking.answer[number].answer38==rank
+        ranks.push(@ranking.element38)
+      end
+      if @ranking.answer[number].answer39==rank
+        ranks.push(@ranking.element39)
+      end
+      if @ranking.answer[number].answer40==rank
+        ranks.push(@ranking.element40)
+      end
+      if @ranking.answer[number].answer41==rank
+        ranks.push(@ranking.element41)
+      end
+      if @ranking.answer[number].answer42==rank
+        ranks.push(@ranking.element42)
+      end
+      if @ranking.answer[number].answer43==rank
+        ranks.push(@ranking.element43)
+      end
+      if @ranking.answer[number].answer44==rank
+        ranks.push(@ranking.element44)
+      end
+      if @ranking.answer[number].answer45==rank
+        ranks.push(@ranking.element45)
+      end
+      if @ranking.answer[number].answer46==rank
+        ranks.push(@ranking.element46)
+      end
+      if @ranking.answer[number].answer47==rank
+        ranks.push(@ranking.element47)
+      end
+      if @ranking.answer[number].answer48==rank
+        ranks.push(@ranking.element48)
+      end
+      if @ranking.answer[number].answer49==rank
+        ranks.push(@ranking.element49)
+      end
+      if @ranking.answer[number].answer40==rank
+        ranks.push(@ranking.element50)
+      end
       menu=ranks.join(" , ")
       return menu
     end
