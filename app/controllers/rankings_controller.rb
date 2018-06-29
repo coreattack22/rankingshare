@@ -2,7 +2,11 @@ class RankingsController < ApplicationController
   before_action :page_explain
   before_action :set_ranking, only: [:show, :edit, :update, :destroy]
   before_action :answer_params, only: [:update]
-  helper_method :culc, :menu
+  helper_method :culc, :menu, :delete_answer
+
+  def delete_answer(ranking)
+
+  end
 
   def index
     @rankings = Ranking.all
@@ -104,7 +108,8 @@ class RankingsController < ApplicationController
   end
 
   def destroy
-    @ranking.destroy
+    @ranking.delete_flg='true'
+    @ranking.save
     respond_to do |format|
       format.html { redirect_to rankings_url, notice: 'Ranking was successfully destroyed.' }
       format.json { head :no_content }

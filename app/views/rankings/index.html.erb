@@ -3,6 +3,7 @@
 <div class="columns">
   <div class="column">
   <% @rankings.each do |ranking| %>
+    <% unless ranking.delete_flg? %>
     <div class="card">
     <header class="card-header">
       <p class="card-header-title">
@@ -38,6 +39,7 @@
       <% end %>
       </footer>
   </div>
+    <% end %>
     <% end %>
   </div>
 </div>
