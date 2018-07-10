@@ -249,7 +249,6 @@ class RankingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def page_explain
       @page_explain="以下のランキングに答えることができます"
     end
@@ -258,7 +257,6 @@ class RankingsController < ApplicationController
       @ranking = Ranking.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def ranking_params
       params.require(:ranking).permit(:maker_id, :title, :ranked_count, :answerd_at, :element1, :element2, :element3, :element4, :element5, :element6, :element7, :element8, :element9, :element10, :element11, :element12, :element13, :element14, :element15, :element16, :element17, :element18, :element19, :element20, :element21, :element22, :element23, :element24, :element25, :element26, :element27, :element28, :element29, :element30, :element31, :element32, :element33, :element34, :element35, :element36, :element37, :element38, :element39, :element40, :element41, :element42, :element43, :element44, :element45, :element46, :element47, :element48, :element49, :element50)
     end
