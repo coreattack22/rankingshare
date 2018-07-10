@@ -34,7 +34,7 @@ class RankingsController < ApplicationController
     unless ranking.element6==""
       menu_string=menu_string+"...."
     end
-    return menu_string
+      menu_string
   end
 
   def culc(rank,number)
@@ -190,7 +190,7 @@ class RankingsController < ApplicationController
         ranks.push(@ranking.element50)
       end
       menu=ranks.join(" , ")
-      return menu
+        menu
     end
 
   def show
