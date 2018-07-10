@@ -1,7 +1,7 @@
 class RankingsController < ApplicationController
   before_action :page_explain
-  before_action :set_ranking, only: [:show, :edit, :update, :destroy]
-  before_action :answer_params, only: [:update]
+  before_action :set_ranking, only: %i[ show edit update destory ]
+  before_action :answer_params, only: %i[ update ]
   helper_method :culc, :menu, :delete_answer
 
   def delete_answer(ranking)
